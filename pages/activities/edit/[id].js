@@ -35,7 +35,7 @@ export default function ActivityEdit({activity}) {
         connectedSkill: []
       })
     }
-    fetch('https://164.90.174.1/api/activities/' + activity.id, configObject)
+    fetch('http://164.90.174.1/api/activities/' + activity.id, configObject)
       .then(res => res.json())
       .then(data => {
         setUpdated(true);
