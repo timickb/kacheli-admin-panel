@@ -43,7 +43,7 @@ export default function ActivitiesIndex() {
   const router = useRouter()
 
   useEffect(() => {
-    fetch('http://164.90.174.1/api/activities')
+    fetch('https://164.90.174.1/api/activities')
       .then(res => res.json())
       .then(data => setActivities(data))
   })
