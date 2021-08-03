@@ -48,12 +48,3 @@ export default function CategoriesIndex() {
 
   )
 }
-
-export async function getStaticProps(context) {
-  const res = await fetch(`http://164.90.174.1/api/categories`)
-  const categories = await res.json()
-
-  return {
-    props: { categories }, // will be passed to the page component as props
-  }
-}
