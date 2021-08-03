@@ -43,7 +43,7 @@ export default function ActivitiesIndex() {
   const router = useRouter()
 
   useEffect(() => {
-    fetch('https://kacheli.azurewebsites.net/api/activities')
+    fetch('https://kacheli.azurewebsites.net/api/activities', {cache: "no-store"})
       .then(res => res.json())
       .then(data => setActivities(data))
   })
