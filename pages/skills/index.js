@@ -27,7 +27,7 @@ export default function SkillsIndex() {
   const router = useRouter()
 
   useEffect(() => {
-    fetch('https://localhost:44353/api/skills')
+    fetch('https://kacheli.azurewebsites.net/api/skills')
       .then(res => res.json())
       .then(data => setSkills(data))
   })

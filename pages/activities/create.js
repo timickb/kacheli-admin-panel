@@ -79,7 +79,7 @@ export default function ActivityCreate({skills}) {
         connectedSkills: generateConnectedSkills(formData.chosenSkills)
       })
     }
-    fetch('http://164.90.174.1//api/activities', configObject)
+    fetch('https://kacheli.azurewebsites.net/api/activities', configObject)
       .then(res => res.json())
       .then(data => {
         setUpdated(true)
@@ -189,7 +189,7 @@ export default function ActivityCreate({skills}) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`http://164.90.174.1/api/skills`)
+  const res = await fetch(`https://kacheli.azurewebsites.net/api/skills`)
   const skills = await res.json()
 
   return {

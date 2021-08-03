@@ -67,7 +67,7 @@ export default function SkillCreate({categories}) {
         status: true,
       })
     }
-    fetch('https://localhost:44353/api/skills', configObject)
+    fetch('https://kacheli.azurewebsites.net/api/skills', configObject)
       .then(res => res.json())
       .then(data => {
         console.log(data)
@@ -135,7 +135,7 @@ export default function SkillCreate({categories}) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch(`http://164.90.174.1/api/categories`)
+  const res = await fetch(`https://kacheli.azurewebsites.net/api/categories`)
   const categories = await res.json()
 
   return {

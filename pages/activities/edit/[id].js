@@ -35,7 +35,7 @@ export default function ActivityEdit({activity}) {
         connectedSkill: []
       })
     }
-    fetch('http://164.90.174.1/api/activities/' + activity.id, configObject)
+    fetch('https://kacheli.azurewebsites.net/api/activities/' + activity.id, configObject)
       .then(res => res.json())
       .then(data => {
         setUpdated(true);
@@ -136,7 +136,7 @@ export default function ActivityEdit({activity}) {
 }
 
 export async function getStaticPaths() {
-  const res = await fetch(`http://164.90.174.1/api/activities`)
+  const res = await fetch(`https://kacheli.azurewebsites.net/api/activities`)
   const activities = await res.json()
 
   const paths = activities.map((activity) => ({
@@ -151,7 +151,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // params contains the post `id`.
   // If the route is like /posts/1, then params.id is 1
-  const res = await fetch(`http://164.90.174.1/api/activities/${params.id}`)
+  const res = await fetch(`https://kacheli.azurewebsites.net/api/activities/${params.id}`)
   const activity = await res.json()
 
   // Pass post data to the page via props

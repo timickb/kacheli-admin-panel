@@ -20,7 +20,7 @@ export default function CategoriesIndex() {
   const router = useRouter()
 
   useEffect(() => {
-    fetch('http://164.90.174.1/api/categories')
+    fetch('https://kacheli.azurewebsites.net/api/categories')
       .then(res => res.json())
       .then(data => setCategories(data))
   })

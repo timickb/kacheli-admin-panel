@@ -58,7 +58,7 @@ export default function CategoryCreate() {
         status: true,
       })
     }
-    fetch('https://164.90.174.1/api/categories', configObject)
+    fetch('https://kacheli.azurewebsites.net/api/categories', configObject)
       .then(res => res.json())
       .then(data => {
         console.log(data)
